@@ -1,0 +1,86 @@
+/* You can add global styles to this file, and also import other style files */
+
+@import "tailwindcss";
+
+/* custom small utilities */
+.fade-in { opacity: 0; transform: translateY(8px); transition: opacity .6s ease, transform .6s ease; }
+.fade-in.show { opacity: 1; transform: translateY(0); }
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* small helper for fade-in animation (class is toggled by IntersectionObserver) */
+.fade-in { opacity: 0; transform: translateY(10px); transition: opacity .6s ease, transform .6s ease; }
+.fade-in.show { opacity: 1; transform: translateY(0); }
+
+
+/* smooth scroll for anchors (optional) */
+html {
+  scroll-behavior: smooth;
+}
+
+.nav-link {
+  @apply text-slate-700 dark:text-slate-200 hover:text-indigo-600 cursor-pointer font-medium;
+}
+
+.mobile-link {
+  @apply block text-left w-full py-2 text-slate-700 dark:text-slate-200 hover:text-indigo-500;
+}
+
+
+
+:root{
+  --bg: #f8fafc;          /* light bg */
+  --surface: #ffffff;     /* light card */
+  --muted: #475569;
+  --strong: #0f172a;
+  --primary: #4f46e5;
+}
+
+/* Dark theme vars applied when html.dark exists */
+html.dark {
+  --bg: #0b1220;
+  --surface: rgba(255,255,255,0.02);
+  --surface-2: rgba(255,255,255,0.04);
+  --muted: #94a3b8;
+  --strong: #e6eef8;
+  --primary: #7c3aed;
+  background-color: var(--bg);
+}
+
+/* Helpers */
+.bg-surface {
+  background-color: var(--surface);
+}
+.dark .bg-surface {
+  background-color: var(--surface);
+}
+
+/* Card / glass look */
+.card {
+  @apply rounded-2xl p-6;
+  background: var(--surface);
+  box-shadow: 0 8px 24px rgba(2,6,23,0.06);
+}
+html.dark .card {
+  background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));
+  backdrop-filter: blur(6px);
+  box-shadow: 0 10px 30px rgba(2,6,23,0.6);
+}
+
+/* Button */
+.btn-primary {
+  @apply px-5 py-2 rounded-lg font-semibold text-white;
+  background: linear-gradient(90deg, #7c3aed, #4f46e5);
+  box-shadow: 0 6px 20px rgba(79,70,229,0.14);
+}
+.btn-primary:hover { transform: translateY(-2px); transition: all .18s ease; }
+
+/* Muted & strong text */
+.text-muted { color: var(--muted); }
+.text-strong { color: var(--strong); }
+
+/* Footer subtle */
+.footer-muted { color: rgba(255,255,255,0.6); }

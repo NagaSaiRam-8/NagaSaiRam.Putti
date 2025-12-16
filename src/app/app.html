@@ -1,0 +1,226 @@
+<!-- <nav class="bg-white dark:bg-slate-900 shadow sticky top-0 z-40">
+<div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+<div class="flex items-center gap-4">
+<img src="profile.jpg" alt="profile" class="w-11 h-11 rounded-full object-cover border-2 border-indigo-500"/>
+<div>
+<div class="text-lg font-semibold text-slate-800 dark:text-slate-100">Naga Sai Ram</div>
+<div class="text-xs text-slate-500 dark:text-slate-300">MSc Computer Science | AI & Data</div>
+</div>
+</div>
+
+
+<div class="flex items-center gap-4">
+<a routerLink="about" class="text-slate-700 dark:text-slate-200 hover:text-indigo-600">About</a>
+<a routerLink="projects" class="text-slate-700 dark:text-slate-200 hover:text-indigo-600">Projects</a>
+<a routerLink="skills" class="text-slate-700 dark:text-slate-200 hover:text-indigo-600">Skills</a>
+<a routerLink="contact" class="text-slate-700 dark:text-slate-200 hover:text-indigo-600">Contact</a>
+<button (click)="toggleDark()" class="p-2 rounded-md bg-slate-100 dark:bg-slate-700">
+@if (!dark) {
+  <span>🌙</span>
+} @else {
+  <span >☀️</span>
+}
+</button>
+<a href="Naga SaiRam AI__DS Resume.pdf" download class="px-4 py-2 bg-indigo-600 text-white rounded-md">Download CV</a>
+</div>
+</div>
+</nav>
+
+
+<header class="bg-gradient-to-b from-slate-50 to-white dark:from-slate-900 dark:to-slate-800">
+<div class="max-w-6xl mx-auto px-6 py-20 text-center">
+<h1 class="text-5xl font-extrabold text-slate-900 dark:text-white">Hi, I'm Naga Sai Ram</h1>
+<p class="mt-4 text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">AI & Data Science enthusiast, MSc Computer Science at UEL, and frontend engineer with production Angular experience.</p>
+<a routerLink="/projects" class="mt-8 inline-block px-6 py-3 bg-indigo-600 text-white rounded-lg font-semibold">View Projects</a>
+</div>
+</header>
+
+
+<main class="max-w-6xl mx-auto px-6">
+  <router-outlet></router-outlet>
+</main> -->
+
+<!-- --- keep your header + hero markup exactly as you have them --- -->
+<!-- <nav class="bg-white dark:bg-slate-900 shadow sticky top-0 z-40">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    <div class="flex items-center gap-4">
+      <img src="profile.jpg" alt="profile" class="w-11 h-11 rounded-full object-cover border-2 border-indigo-500"/>
+      <div>
+        <div class="text-lg font-semibold text-slate-800 dark:text-slate-100">Naga Sai Ram</div>
+        <div class="text-xs text-slate-500 dark:text-slate-300">MSc Computer Science | AI & Data</div>
+      </div>
+    </div>
+
+    <div class="flex items-center gap-4">
+      <button class="text-slate-700 dark:text-slate-200 hover:text-indigo-600" (click)="scrollTo('about')">About</button>
+      <button class="text-slate-700 dark:text-slate-200 hover:text-indigo-600" (click)="scrollTo('projects')">Projects</button>
+      <button class="text-slate-700 dark:text-slate-200 hover:text-indigo-600" (click)="scrollTo('skills')">Skills</button>
+      <button class="text-slate-700 dark:text-slate-200 hover:text-indigo-600" (click)="scrollTo('contact')">Contact</button>
+
+      <button (click)="toggleDark()" class="p-2 rounded-md bg-slate-100 dark:bg-slate-700">
+        @if (!dark) {
+          <span>🌙</span>
+        } @else {
+          <span >☀️</span>
+        }
+      </button>
+
+      <a href="Naga SaiRam AI__DS Resume.pdf" download class="px-4 py-2 bg-indigo-600 text-white rounded-md">Download CV</a>
+    </div>
+  </div>
+</nav>
+
+<header class="bg-gradient-to-b from-slate-50 to-white dark:from-slate-900 dark:to-slate-800">
+  <div class="max-w-6xl mx-auto px-6 py-20 text-center">
+    <h1 class="text-5xl font-extrabold text-slate-900 dark:text-white">Hi, I'm Naga Sai Ram</h1>
+    <p class="mt-4 text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
+      AI & Data Science enthusiast, MSc Computer Science at UEL, and frontend engineer with production Angular experience.
+    </p>
+    <button class="mt-8 inline-block px-6 py-3 bg-indigo-600 text-white rounded-lg font-semibold" (click)="scrollTo('projects')">View Projects</button>
+  </div>
+</header>
+
+<main class="max-w-6xl mx-auto px-6">
+  <section id="about"><app-about></app-about></section>
+  <section id="projects"><app-projects></app-projects></section>
+  <section id="skills"><app-skills></app-skills></section>
+  <section id="contact"><app-contact></app-contact></section>
+</main> -->
+
+<!-- Below code is for advanced sytling in the dark mode-->
+
+<!-- <nav class="sticky top-0 z-50">
+  <div class=" mx-auto px-6 py-4 flex items-center justify-between
+              bg-white dark:bg-gradient-to-b dark:from-bg-deep dark:to-[#122345]">
+    <div class="flex items-center gap-3">
+      <img src="profile.jpg" class="w-11 h-11 rounded-full border-2 border-primary-600 object-cover" />
+      <div>
+        <div class="text-lg font-semibold text-slate-800 dark:text-text-strong">Naga Sai Ram</div>
+        <div class="text-xs text-muted dark:text-emerald-950-">MSc Computer Science | AI & Data</div>
+      </div>
+    </div>
+
+    <div class="hidden md:flex items-center gap-4">
+      <button (click)="scrollTo('about')" class="text-sm font-medium text-slate-700 dark:text-muted hover:text-primary-600">About</button>
+      <button (click)="scrollTo('projects')" class="text-sm font-medium text-slate-700 dark:text-muted hover:text-primary-600">Projects</button>
+      <button (click)="scrollTo('skills')" class="text-sm font-medium text-slate-700 dark:text-muted hover:text-primary-600">Skills</button>
+      <button (click)="scrollTo('contact')" class="text-sm font-medium text-slate-700 dark:text-muted hover:text-primary-600">Contact</button>
+
+      <button (click)="toggleDark()" class="p-2 rounded-md bg-slate-100 dark:bg-slate-800">
+         @if (!dark) {
+          <span>🌙</span>
+        } @else {
+          <span >☀️</span>
+        }
+      </button>
+
+      <a href="Naga SaiRam AI__DS Resume.pdf" download class="btn-primary">Download CV</a>
+    </div>
+
+    <button class="md:hidden p-2" (click)="mobileMenu = !mobileMenu">
+      @if (!mobileMenu) { ☰ } @else { ✕ }
+    </button>
+  </div>
+
+  <div class="md:hidden bg-white dark:bg-bg-deep px-6 pb-4 space-y-2">
+    @if (mobileMenu) { 
+
+        <button (click)="scrollTo('about'); mobileMenu=false" class="block w-full text-left py-2 text-slate-700 dark:text-muted">About</button>
+        <button (click)="scrollTo('projects'); mobileMenu=false" class="block w-full text-left py-2 text-slate-700 dark:text-muted">Projects</button>
+        <a href="Naga SaiRam AI__DS Resume.pdf" download class="block w-full text-center py-2 rounded bg-gradient-to-r from-primary-600 to-accent-500 text-white">Download CV</a>
+     }
+  </div>
+</nav>
+
+<header class="bg-gradient-to-b from-white dark:from-bg-deep dark:via-[#071027] dark:to-[#050814]">
+  <div class="max-w-6xl mx-auto px-6 py-28 text-center">
+    <h1 class="text-5xl md:text-6xl font-extrabold text-slate-900 dark:text-text-strong leading-tight">Hi, I'm <span class="text-primary-600 dark:text-primary-600">Naga Sai Ram</span></h1>
+    <p class="mt-4 text-lg text-muted dark:text-muted max-w-2xl mx-auto">AI & Data Science enthusiast, MSc Computer Science at UEL, with production Angular experience and a research project on fake review detection using NLP & GNNs.</p>
+    <div class="mt-8 flex justify-center gap-4">
+      <button (click)="scrollTo('projects')" class="btn-primary">View Projects</button>
+      <a href="#contact" class="py-2 px-4 rounded-lg border border-slate-200 dark:border-slate-700 text-muted">Get in touch</a>
+    </div>
+  </div>
+</header> -->
+
+
+<!-- Normal Styling in dark mode -->
+<nav class="bg-white dark:bg-slate-900 shadow sticky top-0 z-40">
+  <div class="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+    
+    <div class="flex items-center gap-3">
+      <img src="profile.jpg" class="w-10 h-10 rounded-full border-2 border-indigo-500" />
+      <div>
+        <div class="text-lg font-semibold text-slate-800 dark:text-white">Naga Sai Ram</div>
+        <div class="text-xs text-slate-500 dark:text-slate-300">MSc Computer Science | AI & Data</div>
+      </div>
+    </div>
+
+    <div class="hidden md:flex items-center gap-4">
+      <button class="nav-link" (click)="scrollTo('about')">About</button>
+      <button class="nav-link" (click)="scrollTo('projects')">Projects</button>
+      <button class="nav-link" (click)="scrollTo('skills')">Skills</button>
+      <button class="nav-link" (click)="scrollTo('contact')">Contact</button>
+
+      <button (click)="toggleDark()" class="p-2 rounded-md bg-slate-100 dark:bg-slate-700">
+        @if (!dark) { 🌙 } @else { ☀️ }
+      </button>
+
+      <a 
+        href="Naga SaiRam AI__DS Resume.pdf" 
+        download 
+        class="px-4 py-2 bg-indigo-600 text-white rounded-md"
+      >
+        Download CV
+      </a>
+    </div>
+
+    <button 
+      class="md:hidden p-2 text-slate-700 dark:text-slate-200"
+      (click)="mobileMenu = !mobileMenu"
+    >
+      @if (!mobileMenu) { ☰ } @else { ✕ }
+    </button>
+
+  </div>
+
+  <div class="md:hidden bg-white dark:bg-slate-900 px-6 pb-4 space-y-3">
+    @if (mobileMenu) {
+      <button class="mobile-link" (click)="scrollTo('about'); mobileMenu=false">About</button>
+      <button class="mobile-link" (click)="scrollTo('projects'); mobileMenu=false">Projects</button>
+      <button class="mobile-link" (click)="scrollTo('skills'); mobileMenu=false">Skills</button>
+      <button class="mobile-link" (click)="scrollTo('contact'); mobileMenu=false">Contact</button>
+  
+      <button (click)="toggleDark()" class="w-full py-2 rounded bg-slate-200 dark:bg-slate-700">
+        @if (!dark) { 🌙 Dark Mode } @else { ☀️ Light Mode }
+      </button>
+  
+      <a 
+        href="Naga SaiRam AI__DS Resume.pdf" 
+        download 
+        class="block text-center w-full py-2 rounded bg-indigo-600 text-white"
+      >
+        Download CV
+      </a>
+    }
+  </div>
+
+</nav>
+<header class="bg-gradient-to-b from-slate-50 to-white dark:from-slate-900 dark:to-slate-800">
+  <div class="max-w-6xl mx-auto px-6 py-20 text-center">
+    <h1 class="text-5xl font-extrabold text-slate-900 dark:text-white">Hi, I'm Naga Sai Ram</h1>
+    <p class="mt-4 text-lg text-slate-600 dark:text-slate-300 max-w-2xl mx-auto">
+      AI & Data Science enthusiast, MSc Computer Science at UEL, and frontend engineer with production Angular experience.
+    </p>
+    <button class="mt-8 inline-block px-6 py-3 bg-indigo-600 text-white rounded-lg font-semibold" (click)="scrollTo('projects')">View Projects</button>
+  </div>
+</header>
+
+<main class="max-w-6xl mx-auto px-6">
+  <section id="about"><app-about></app-about></section>
+  <section id="projects"><app-projects></app-projects></section>
+  <section id="skills"><app-skills></app-skills></section>
+  <section id="contact"><app-contact></app-contact></section>
+</main>
+
+<footer class="text-center py-6 mt-12 text-slate-600 bg-gradient-to-b from-slate-50 to-white dark:from-slate-900 dark:to-slate-800">© 2025 Naga Sai Ram</footer>
