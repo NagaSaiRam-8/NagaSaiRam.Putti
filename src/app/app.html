@@ -13,17 +13,17 @@
     </div>
 
     <div class="hidden md:flex items-center gap-4">
+      <button class="nav-link transition-all duration-300  hover:-translate-y-2
+                hover:shadow-2xl" (click)="scrollTo('about')">About</button>
       <button class="nav-link transition-all duration-300
-               hover:-translate-x-2 hover:shadow-2xl" (click)="scrollTo('about')">About</button>
+               hover:-translate-y-2 hover:shadow-2xl" (click)="scrollTo('projects')">Projects</button>
       <button class="nav-link transition-all duration-300
-               hover:-translate-x-2 hover:shadow-2xl" (click)="scrollTo('projects')">Projects</button>
+               hover:-translate-y-2 hover:shadow-2xl" (click)="scrollTo('skills')">Skills</button>
       <button class="nav-link transition-all duration-300
-               hover:-translate-x-2 hover:shadow-2xl" (click)="scrollTo('skills')">Skills</button>
-      <button class="nav-link transition-all duration-300
-               hover:-translate-x-2 hover:shadow-2xl" (click)="scrollTo('contact')">Contact</button>
+               hover:-translate-y-2 hover:shadow-2xl" (click)="scrollTo('contact')">Contact</button>
 
       <button (click)="toggleDark()" class="p-2 rounded-md bg-slate-100 dark:bg-slate-700 transition-all duration-300
-               hover:-translate-x-2 hover:shadow-2xl">
+               hover:-translate-y-2 hover:shadow-2xl">
         @if (!dark) { 🌙 } @else { ☀️ }
       </button>
 
@@ -31,7 +31,7 @@
         href="Naga SaiRam AI__DS Resume.pdf" 
         download 
         class="px-4 py-2 bg-indigo-600 text-white rounded-md transition-all duration-300
-               hover:-translate-x-2 hover:shadow-2xl"
+               hover:-translate-y-2 hover:shadow-2xl"
       >
         Download CV
       </a>
